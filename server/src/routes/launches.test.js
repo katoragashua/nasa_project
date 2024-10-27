@@ -1,10 +1,12 @@
 const request = require("supertest");
 const app = require("../app");
 const { connectDB, disconnectDB } = require("../db/connectDB");
+const { loadPlanets } = require("../models/planets.model");
 
 describe("Launches API", () => {
   beforeAll(async () => {
     await connectDB();
+    await loadPlanets
   });
   afterAll(async () => {
     await disconnectDB();
