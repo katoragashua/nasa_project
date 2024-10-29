@@ -6,7 +6,7 @@ const { loadPlanets } = require("../models/planets.model");
 describe("Launches API", () => {
   beforeAll(async () => {
     await connectDB();
-    await loadPlanets
+    await loadPlanets()
   });
   afterAll(async () => {
     await disconnectDB();
